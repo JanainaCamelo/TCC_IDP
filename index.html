@@ -12,13 +12,22 @@
 
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script>
-            function mostrar(d) {
-                li = document.createElement( 'li' )
-                li.textContent = d.NM_CANDIDATO
-                nomes.append( li )
+            let dados
+
+            function mostrar(dados) {
+                for ( let dado of dados ) {         
+                    li = document.createElement( 'li' )
+                    li.textContent = dado.NM_CANDIDATO
+                    nomes.append( li )
+                }
             }
 
-            d3.csv( 'data/dados_2014.csv', mostrar )
+            async function carregar() {
+                dados = await d3.csv( 'data/dados_2014.csv' )
+                mostrar( dados )
+            }
+
+            carregar()
         </script>
     </body>
 </html>
