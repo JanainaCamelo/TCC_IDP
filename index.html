@@ -7,5 +7,18 @@
     </head>
     <body>
         <h1>Calculadora</h1>
+        <ul id="nomes">
+        </ul>
+
+        <script src="https://d3js.org/d3.v7.min.js"></script>
+        <script>
+            function mostrar(d) {
+                li = document.createElement( 'li' )
+                li.textContent = d.NM_CANDIDATO
+                nomes.append( li )
+            }
+
+            d3.csv( 'data/dados_2014.csv', mostrar )
+        </script>
     </body>
 </html>
