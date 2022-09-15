@@ -7,17 +7,57 @@
     </head>
     <body>
         <h1>Calculadora</h1>
-        <ul id="nomes">
-        </ul>
+
+        <label>
+            Selecione uma cor/raça:
+            <select id="seletorCorRaca">
+                <option value="TODAS">Todas</option>
+                <option value="AMARELA">Amarela</option>
+                <option value="BRANCA">Branca</option>
+                <option value="INDÍGENA">Indígena</option>
+                <option value="PARDA">Parda</option>
+                <option value="PRETA">Preta</option>
+            </select>
+        </label>
+
+        <ul id="nomes"></ul>
 
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <script>
             let dados
 
+            function filtrar() {
+
+                let corRaca = seletorCorRaca.value 
+
+                function checarCorRaca(dado) {
+                    if ( corRaca === 'TODAS' ) {
+                        return true
+                    } else if ( dado.DS_COR_RACA == corRaca ) {
+                        return true
+                    } else {
+                        return false
+                    }
+                }
+
+                let dadosFiltrados = dados.filter( checarCorRaca )
+
+                mostrar( dadosFiltrados )
+                
+            }
+
+            // Quando pessoa seleciona uma cor/raça
+            seletorCorRaca.onchange = filtrar
+
             function mostrar(dados) {
+                
+                // Limpa a lista
+                nomes.textContent = ''
+
+                // Adiciona itens
                 for ( let dado of dados ) {         
                     li = document.createElement( 'li' )
-                    li.textContent = dado.NM_CANDIDATO
+                    li.textContent = dado.NM_URNA_CANDIDATO
                     nomes.append( li )
                 }
             }
