@@ -7,10 +7,6 @@ function filtrar() {
     function checarCorRaca(dado) {
         if (corRaca === 'TODAS') {
             return true
-        } else if (dado.DS_COR_RACA == corRaca) {
-            return true
-        } else {
-            return false
         }
     }
 
