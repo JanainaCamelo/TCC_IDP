@@ -20,6 +20,12 @@
             </select>
         </label>
 
+        <p>
+            Total de
+            <output id="total">…</output>
+            pessoas com estas características se candidaram.
+        </p>
+
         <ul id="nomes"></ul>
 
         <script src="https://d3js.org/d3.v7.min.js"></script>
@@ -51,6 +57,9 @@
 
             function mostrar(dados) {
                 
+                // Atualiza total
+                total.textContent = dados.length
+
                 // Limpa a lista
                 nomes.textContent = ''
 
