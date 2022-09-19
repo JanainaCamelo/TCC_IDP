@@ -25,7 +25,7 @@
     <label>
         Selecione um gênero:
         <select id="seletorGenero">
-            <option value="TODAS">Todas</option>
+            <option value="TODOS">Todos</option>
             <option value="FEMININO">Feminino</option>
             <option value="MASCULINO">Masculino</option>
         </select>
@@ -35,7 +35,18 @@
         Total de
         <output id="total">…</output>
         pessoas com estas características se candidaram.
+        Destas, apenas
+        <output id="totalEleitos">…</output>
+        foram eleitas.
+        Isto equivale a uma chance de
+        <output id="percentual">…</output>
+        dessa pessoa ser eleita.
+        <!--
+        Neste ano, [mulheres] [pardas] representavam
+        XX% da Câmara dos Deputados.
+        -->
     </p>
+
 
     <ul id="nomes"></ul>
 
