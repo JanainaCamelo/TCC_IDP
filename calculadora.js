@@ -7,6 +7,7 @@ function filtrar() {
     // Pega valor mais atual do seletor de cor/raça
     let corRaca = seletorCorRaca.value
 
+
     function checarCorRaca(dado) {
 
         // Evita filtrar se opção for “Todas”
