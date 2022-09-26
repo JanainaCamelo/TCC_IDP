@@ -1,3 +1,7 @@
+body {
+    background-color: aliceblue;
+}
+
 h1 {
     background-color:dodgerblue;
     color:aliceblue;
@@ -8,6 +12,10 @@ label {
     color: black;
 }
 
-p {
+.resultado {
+    font-weight: bold;
+}
+
+output {
     color:dodgerblue;
 }
