@@ -1,5 +1,9 @@
 // Declara variável dados como global
-let dados
+let dados = {
+    "2022" : [],
+    "2018" : [],
+    "2014" : []
+}
 
 // Define função que filtra dados com base em seletores
 function filtrar() {
@@ -33,8 +37,11 @@ function filtrar() {
         return dado.DS_GENERO === genero
     }
 
+    // Pega ano selecionado
+    let ano = seletorAno.value
+
     // Filtra dados
-    dadosFiltrados = dados.filter(checarCorRaca)
+    dadosFiltrados = dados[ ano ].filter(checarCorRaca)
     dadosFiltrados = dadosFiltrados.filter(checarGenero)
 
     function filtrarEleitos(dado) {
@@ -52,6 +59,7 @@ function filtrar() {
 // Quando pessoa seleciona uma cor/raça
 seletorCorRaca.onchange = filtrar
 seletorGenero.onchange = filtrar
+seletorAno.onchange = filtrar
 
 // Define função para mostrar pessoas candidatas
 function mostrar(candidatos, eleitos) {
@@ -66,6 +74,12 @@ function mostrar(candidatos, eleitos) {
 
     // Calcula percentual
     percentual.textContent = valorPercentual.toFixed(1) + '%'
+    
+    // Aumenta barra proporcionalmente (valor arbitrário)
+    let comprimento = valorPercentual * 8
+
+    // Atualizar comprimento do gráfico de barra
+    barra.style.width = comprimento + 'px'
 
     // Limpa a lista
     nomes.textContent = ''
@@ -86,7 +100,8 @@ function mostrar(candidatos, eleitos) {
 
 // Define função para carregar dados (só 2014)
 async function carregar() {
-    dados = await d3.csv('data/dados_2014.csv')
+    dados[ '2018' ] = await d3.csv('data/dados_2018.csv')
+    dados[ '2014' ] = await d3.csv('data/dados_2014.csv')
 
     // Mostra pessoas candidatas
     filtrar()

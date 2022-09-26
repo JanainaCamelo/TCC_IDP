@@ -32,6 +32,15 @@
         </select>
     </label>
 
+    <label>
+        Selecione o ano:
+        <select id="seletorAno">
+            <option value="2022" disabled>2022</option>
+            <option value="2018">2018</option>
+            <option value="2014">2014</option>
+        </select>
+    </label>
+
     <p class="resultado">
         Total de
         <output id="total">…</output>
@@ -40,13 +49,17 @@
         <output id="totalEleitos">…</output>
         foram eleitas.
         Isto equivale a uma chance de
-        <output id="percentual">…</output>
+        <output id="percentual">…</output> <span id="barra"></span>
         dessa pessoa ser eleita.
         <!--
         Neste ano, [mulheres] [pardas] representavam
         XX% da Câmara dos Deputados.
         -->
     </p>
+
+    <div class="grafico">
+        
+    </div>
 
     <ul id="nomes"></ul>
 

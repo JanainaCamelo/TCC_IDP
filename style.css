@@ -19,3 +19,11 @@ label {
 output {
     color:dodgerblue;
 }
+
+#barra {
+    display: inline-block;
+    width: 0;
+    height: 16px;
+    background: dodgerblue;
+    border-radius: 3px;
+}
