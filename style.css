@@ -1,29 +1,42 @@
 body {
-    background-color: aliceblue;
+    color:white;
+    background-color:black;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+ul {
+    padding: 16px;
+
 }
 
 h1 {
-    background-color:dodgerblue;
-    color:aliceblue;
+    color:white;
     text-align: center;
+    font-size:110px;
+}
+
+.home__hero__header-title span {
+    color:yellow;
 }
 
 label {
-    color: black;
+    color:white;
+    font-size: 20px;
 }
 
 .resultado {
     font-weight: bold;
+    font-size: 28px;
 }
 
 output {
-    color:dodgerblue;
+    color: yellow;
 }
 
 #barra {
     display: inline-block;
     width: 0;
     height: 16px;
-    background: dodgerblue;
+    background: yellow;
     border-radius: 3px;
 }
