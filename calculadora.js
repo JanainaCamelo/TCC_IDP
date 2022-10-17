@@ -11,6 +11,7 @@ function filtrar() {
     // Pega valor mais atual do seletor de cor/raça
     let corRaca = seletorCorRaca.value
     let genero = seletorGenero.value
+    let partido = seletorPartido.value
 
     // Declara variável para ser filtrada múltiplas vezes
     let dadosFiltrados
@@ -37,12 +38,23 @@ function filtrar() {
         return dado.DS_GENERO === genero
     }
 
+    function checarPartido(dado) {
+        // Evita filtrar se opção for “Todos”
+        if (partido === 'TODOS') {
+            return true
+        }
+
+        // Mantém apenas as pessoas que tem o gênero igual à opção selecionada
+        return dado.SG_PARTIDO === partido        
+    }
+
     // Pega ano selecionado
     let ano = seletorAno.value
 
     // Filtra dados
     dadosFiltrados = dados[ ano ].filter(checarCorRaca)
     dadosFiltrados = dadosFiltrados.filter(checarGenero)
+    dadosFiltrados = dadosFiltrados.filter(checarPartido)
 
     function filtrarEleitos(dado) {
         return dado.DS_SIT_TOT_TURNO === 'ELEITO'
@@ -56,10 +68,11 @@ function filtrar() {
 
 }
 
-// Quando pessoa seleciona uma cor/raça
+// Quando pessoa altera um seletor
 seletorCorRaca.onchange = filtrar
 seletorGenero.onchange = filtrar
 seletorAno.onchange = filtrar
+seletorPartido.onchange = filtrar
 
 // Define função para mostrar pessoas candidatas
 function mostrar(candidatos, eleitos) {
@@ -91,7 +104,15 @@ function mostrar(candidatos, eleitos) {
         li = document.createElement('li')
 
         // Adiciona nome de urna dentro da <li>
-        li.textContent = candidato.NM_URNA_CANDIDATO
+        li.textContent = candidato.NM_URNA_CANDIDATO + ' - ' + candidato.SG_UF
+
+        // Se candidato está na lista de eleitos
+        let eleito = eleitos.includes( candidato )
+
+        if ( eleito ) {
+            // Adiciona classe “eleito”
+            li.classList.add('eleito')
+        }
 
         // Adiciona <li> à <ul>
         nomes.append(li)
