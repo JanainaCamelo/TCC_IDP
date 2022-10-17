@@ -83,9 +83,17 @@ function mostrar(candidatos, eleitos) {
     // Atualiza total de eleitos
     totalEleitos.textContent = eleitos.length
 
-    let valorPercentual = eleitos.length / candidatos.length * 100
+    // Inicia a chance como zero
+    let valorPercentual = 0
 
-    // Calcula percentual
+    // Evita dividir por zero
+    if ( candidatos.length > 0 ) {
+
+        // Calcula change
+        valorPercentual = eleitos.length / candidatos.length * 100
+    }
+
+    // Mostra chance como percentual
     percentual.textContent = valorPercentual.toFixed(1) + '%'
     
     // Aumenta barra proporcionalmente (valor arbitrário)
