@@ -129,6 +129,7 @@ function mostrar(candidatos, eleitos) {
 
 // Define função para carregar dados (só 2014)
 async function carregar() {
+    dados[ '2022' ] = await d3.csv('data/dados_2022.csv')
     dados[ '2018' ] = await d3.csv('data/dados_2018.csv')
     dados[ '2014' ] = await d3.csv('data/dados_2014.csv')
 
