@@ -5,14 +5,14 @@ body {
 }
 
 ul {
-    padding: 16px;
+    padding: 10px;
 
 }
 
 h1 {
     color:white;
     text-align: center;
-    font-size:110px;
+    font-size:80px;
 }
 
 .home__hero__header-title span {
