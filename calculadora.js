@@ -97,7 +97,7 @@ function mostrar(candidatos, eleitos) {
     percentual.textContent = valorPercentual.toFixed(1) + '%'
     
     // Aumenta barra proporcionalmente (valor arbitrário)
-    let comprimento = valorPercentual * 8
+    let comprimento = valorPercentual * 10
 
     // Atualizar comprimento do gráfico de barra
     barra.style.width = comprimento + 'px'
