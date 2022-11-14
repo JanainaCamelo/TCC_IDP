@@ -12,21 +12,39 @@ ul {
 h1 {
     color:white;
     text-align: center;
-    font-size:80px;
+    font-size:100px;
 }
 
 .home__hero__header-title span {
     color:yellow;
 }
 
+@media (min-width: 200px) and (max-width: 550px) {
+    h1{
+        font-size:35px
+    }      
+}
+
 label {
     color:white;
-    font-size: 20px;
+    font-size: 25px;
+}
+
+@media (min-width: 200px) and (max-width: 550px) {
+    label{
+        font-size:16px
+    }
 }
 
 .resultado {
     font-weight: bold;
-    font-size: 28px;
+    font-size: 30px;
+}
+
+@media (min-width: 200px) and (max-width: 550px) {
+    .resultado{
+        font-size:20px
+    }
 }
 
 output {
@@ -57,3 +75,4 @@ output {
     text-transform: uppercase;
     letter-spacing: 1px;
 }
+
