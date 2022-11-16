@@ -13,14 +13,11 @@
     <h1 class = "home__hero__header-title">REPRESENTATIVIDADE E O ESPAÇO <span>FEMININO</span> NA CÂMARA FEDERAL</h1>
 
     <label>
-        Selecione uma cor/raça:
-        <select id="seletorCorRaca">
-            <option value="TODAS">Todas</option>
-            <option value="AMARELA">Amarela</option>
-            <option value="BRANCA">Branca</option>
-            <option value="INDÍGENA">Indígena</option>
-            <option value="PARDA">Parda</option>
-            <option value="PRETA">Preta</option>
+        Selecione o ano:
+        <select id="seletorAno">
+            <option value="2022">2022</option>
+            <option value="2018">2018</option>
+            <option value="2014">2014</option>
         </select>
     </label>
 
@@ -34,11 +31,14 @@
     </label>
 
     <label>
-        Selecione o ano:
-        <select id="seletorAno">
-            <option value="2022">2022</option>
-            <option value="2018">2018</option>
-            <option value="2014">2014</option>
+        Selecione uma cor/raça:
+        <select id="seletorCorRaca">
+            <option value="TODAS">Todas</option>
+            <option value="AMARELA">Amarela</option>
+            <option value="BRANCA">Branca</option>
+            <option value="INDÍGENA">Indígena</option>
+            <option value="PARDA">Parda</option>
+            <option value="PRETA">Preta</option>
         </select>
     </label>
 
@@ -98,13 +98,13 @@
     <p class="resultado">
         Total de
         <output id="total">…</output>
-        pessoas com estas características se candidaram.
+        pessoas com estas características se candidataram.
         Destas,
         <output id="totalEleitos">…</output>
         foram eleitas.
-        Isto equivale a uma chance de
+        Isto equivale a
         <output id="percentual">…</output> <span id="barra"></span>
-        de alguém com este perfil ocupar uma vaga na Câmara dos Deputados.
+        das candidaturas neste perfil com êxito nas urnas no ano selecionado.
         <!--
         Neste ano, [mulheres] [pardas] representavam
         XX% da Câmara dos Deputados.
