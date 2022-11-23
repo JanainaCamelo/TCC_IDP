@@ -25,6 +25,10 @@ h1 {
     }      
 }
 
+p {
+    font-size: 40px
+}
+
 label {
     color:white;
     font-size: 25px;
