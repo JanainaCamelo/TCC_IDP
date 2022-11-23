@@ -1,6 +1,6 @@
 body {
-    color:white;
-    background-color:black;
+    color:purple;
+    background-color:white;
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
@@ -10,13 +10,13 @@ ul {
 }
 
 h1 {
-    color:white;
+    color:purple;
     text-align: center;
     font-size:100px;
 }
 
 .home__hero__header-title span {
-    color:yellow;
+    color:orangered;
 }
 
 @media (min-width: 200px) and (max-width: 550px) {
@@ -26,11 +26,11 @@ h1 {
 }
 
 p {
-    font-size: 40px
+    font-size: 20px
 }
 
 label {
-    color:white;
+    color:purple;
     font-size: 25px;
 }
 
@@ -52,25 +52,25 @@ label {
 }
 
 output {
-    color: yellow;
+    color: orangered;
 }
 
 #barra {
     display: inline-block;
     width: 0;
     height: 16px;
-    background: yellow;
+    background: orangered;
     border-radius: 3px;
 }
 
 .eleito {
-    color: yellow;
+    color: orangered;
 }
 
 /* Cria badge */
 .eleito::after {
     content: 'Eleito';
-    background: yellow;
+    background: orangered;
     color: black;
     padding: 2px 4px;
     font-size: 10px;
